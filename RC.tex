@@ -54,7 +54,7 @@ Das Bode Diagramm zeigt den Verlauf der Dämpfung und des Phasenwinkels des Filt
   \begin{tikzpicture}
     \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={dB},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=dB, col sep=comma] {csv_files/RC_dB.csv};
-      \node[label={260:{$f_g$}},square,fill=blue,inner sep=3pt] at (axis cs:723.43,-3) {};
+      \node[label={260:{$f_g$}},rectangle,fill=blue,inner sep=3pt] at (axis cs:723.43,-3) {};
     \end{axis}
   \end{tikzpicture}
   \caption{Bode Diagramm RC-Tiefpass, Dämpfung}
@@ -68,7 +68,7 @@ mit $-20dB/DEK$ zu. Ab $100kHz$ war die Dämpfung mit dem Oszilloskop nahezu nic
   \begin{tikzpicture}
     \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={$\phi$},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=Phi, col sep=comma] {csv_files/RC_Phi.csv};
-      \node[label={260:{$f_g$}},square,fill=blue,inner sep=3pt] at (axis cs:723.43,-45) {};
+      \node[label={260:{$f_g$}},rectangle,fill=blue,inner sep=3pt] at (axis cs:723.43,-45) {};
     \end{axis}
   \end{tikzpicture}
   \caption{Bode Diagramm RC-Tiefpass, Phasengang}
@@ -76,6 +76,6 @@ mit $-20dB/DEK$ zu. Ab $100kHz$ war die Dämpfung mit dem Oszilloskop nahezu nic
 \noindent
 Der Phasengang verläuft von $0^\circ$ bis $-90^\circ$. Auch hier wurde die Messung ab $100kHz$ sehr ungenau. Die Grenzfrequenz liegt hier bei $-45^\circ$.\\
 \\
-Die Messergebnisse des RC-Tiefpassfilters 1.Ordnung stimmen, bis auf kleine Abweichungen durch Messfehler und Bauteiltoleranzen, weitest gehend mit der Simmulation überein. 
+Die Messergebnisse des RC-Tiefpassfilters 1.Ordnung stimmen, bis auf kleine Abweichungen durch Messfehler und Bauteiltoleranzen, weitest gehend mit der Simmulation überein.
 Nur bei hohen Frequenzen, ab ca $100kHz$, gab es bei der Messung der Ausgangsspannung und des Phasenwinkels ungenauigkeiten, auf Grund der fortgeschrittenen Dämpfung war das
 Ausgangssignal kaum mehr zu messen. \\

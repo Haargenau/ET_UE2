@@ -56,13 +56,13 @@ Das Bode Diagramm zeigt den Verlauf der Dämpfung und des Phasenwinkels des Filt
   \begin{tikzpicture}
     \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={dB},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=dB, col sep=comma] {csv_files/RL_dB.csv};
-      \node[label={340:{$f_g$}},square,fill=blue,inner sep=3pt] at (axis cs:7480.28,-3) {};
+      \node[label={340:{$f_g$}},rectangle,fill=blue,inner sep=3pt] at (axis cs:7480.28,-3) {};
     \end{axis}
   \end{tikzpicture}
   \caption{Bode Diagramm RL-Hochpass, Dämpfung}
 \end{figure}
 \noindent
-Die niedrigen Frequenzen werden vom Hochpassfilter stark gedämpft. Die Dämpfung nimmt bei steigender Frequenz, mit $20dB/DEK$, ab. Ist die Grenzfrequenz, von 
+Die niedrigen Frequenzen werden vom Hochpassfilter stark gedämpft. Die Dämpfung nimmt bei steigender Frequenz, mit $20dB/DEK$, ab. Ist die Grenzfrequenz, von
 $f_g = \frac{R}{2\pi L} = 7480,28Hz$ erreicht, wird das Signal ungedämpft durchgelassen. Der Knick bei $50Hz$ ensteht durch den Spannungsteiler, der sich durch den
 parasitären Innenwiderstand der realen Spule ergibt. Dieser wird mit zunehmender Frequenz von der steigenden Impedanz der Spule überdeckt.\\
 
@@ -71,15 +71,15 @@ parasitären Innenwiderstand der realen Spule ergibt. Dieser wird mit zunehmende
   \begin{tikzpicture}
     \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={$\phi$},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=Phi, col sep=comma] {csv_files/RL_Phi.csv};
-      \node[label={0:{$f_g$}},square,fill=blue,inner sep=3pt] at (axis cs:7200,45) {};
+      \node[label={0:{$f_g$}},rectangle,fill=blue,inner sep=3pt] at (axis cs:7200,45) {};
     \end{axis}
   \end{tikzpicture}
   \caption{Bode Diagramm RL-Hochpass, Phasengang}
 \end{figure}
 \noindent
-Der Phasengang verläuft von $0^\circ$ bis $70^\circ$ und nimmt dann wieder ab. Die Spule besitzt, auf Grund ihres Innenwiderstandes, zwei Phasenlagen von jeweils $45^\circ$, 
+Der Phasengang verläuft von $0^\circ$ bis $70^\circ$ und nimmt dann wieder ab. Die Spule besitzt, auf Grund ihres Innenwiderstandes, zwei Phasenlagen von jeweils $45^\circ$,
 jedoch entspricht nur die um $7500Hz$ der Grenzfrequenz.\\
 \\
 Durch den, vom Spulenstrom verursachten, Spannungseinbruch des Frequenzgenerators wurde die Messung des Frequenzganges nicht beeinträchtigt, da hierbei lediglich
-das Verhältnis der Ausgangs- zur Eingangsspannung betrachtet wird. Die Messergebnisse stimmen auch weitestgehend mit der Simulation der realen Spule, mit parasitären 
+das Verhältnis der Ausgangs- zur Eingangsspannung betrachtet wird. Die Messergebnisse stimmen auch weitestgehend mit der Simulation der realen Spule, mit parasitären
 Innenwiderstand, überein. \\
