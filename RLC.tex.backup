@@ -10,9 +10,9 @@ In diesem Beispiel war ein RLC-Tiefpass aufzubauen und mit drei verschiedenen Wi
     \begin{circuitikz}[scale=1.3]
       \draw
     (0,0) to[sinusoidal voltage source,v<=$U_1$] (0,2) % The voltage source
-          to[L=$1mH$] (3,2)
-          to[R=$22\Omega$] (6,2)
-          to[C=$100nF$] (6,0)
+          to[L=$L=1mH$] (3,2)
+          to[R=$R=22\Omega$] (6,2)
+          to[C=$C=100nF$] (6,0)
           to[short] (0,0);
     \end{circuitikz}
     \caption{RLC-Glied Messschaltung.}
@@ -110,7 +110,7 @@ Da es sich hier um einen Filter mit kritischer D\"ampfung handelt, beginnt die D
   \end{center}
 \end{figure}
 \noindent
-Mit einem gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ sehr gro\ss{}, d.h. der Filter braucht sehr lange bis die D\"ampfung erreicht wird.
+Mit einem sehr gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ sehr gro\ss{}, d.h. das Filter braucht sehr lange bis die D\"ampfung erreicht wird.
 
 \subsection{Bodediagramm $R=1k\Omega$}
 
@@ -134,7 +134,7 @@ Mit einem gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ se
   \end{tikzpicture}
   \caption{Bode Diagramm RLC-Tiefpass, $R=1k\Omega$, Phasengang}
 \end{figure}
-Dieses schlechte D\"ampfungsverhalten, welches bereits in der Sprunganwort zu erkenne war, zeichnet sich auch im Bodediagramm ab. Der Filter beginnt bereits sehr fr\"uh zu d\"ampfen, jedoch betr\"agt die Filtersteilheit nur -20dB/Dec. Dies liegt daran, dass nur der RC-Teil aktiv ist. Die Grenzfrequenz des RL-Teils liegt weit dar\"uber, bei ca. $150kHz$. Dieser Knick ist allerdings im Amplitudengang nur mehr sehr schlecht zu erkennen, da bei dieser hohen Frequenz das Ausgangsignal beretis so stark ged\"ampft wurde, dass keine vern\"uftigen Messergebnisse mehr aufgenommen werden konnten. Im Phasengang, ist die Drehung von $-90^\circ$ auf $-180^\circ$ bei ca. $150kHz$ zu erkennen. \\ \\
+Dieses schlechte D\"ampfungsverhalten, welches bereits in der Sprunganwort zu erkenne war, zeichnet sich auch im Bodediagramm ab. Das Filter beginnt bereits sehr fr\"uh zu d\"ampfen, jedoch betr\"agt die Filtersteilheit nur -20dB/Dec. Dies liegt daran, dass nur der RC-Teil aktiv ist. Die Grenzfrequenz des RL-Teils liegt weit dar\"uber, bei ca. $150kHz$. Dieser Knick ist allerdings im Amplitudengang nur mehr sehr schlecht zu erkennen, da bei dieser hohen Frequenz das Ausgangsegnal beretis so stark ged\"ampft wrude, dass keine vern\"uftigen Messergebnisse mehr aufgenommen werden konnten. Im Phasengang, ist die Drehung von $-90^\circ$ auf $-180^\circ$ bei ca. $150kHz$ zu erkennen. \\ \\
 Grenzfrequenz des RC-Teiles: $f_g=\frac{1}{2\pi RC}=\frac{1}{2\pi*1k\Omega *100nF}=1591Hz$ \\ \\
 Grenzfrequenz des LC-Teiles: $f_g=\frac{R}{2\pi L} = \frac{1k\Omega}{2\pi*1mH}=159155Hz$
 
@@ -147,9 +147,7 @@ Grenzfrequenz des LC-Teiles: $f_g=\frac{R}{2\pi L} = \frac{1k\Omega}{2\pi*1mH}=1
   \end{center}
 \end{figure}
 \noindent
-Das Diagramm zeigt die Polstellen der verschiedenen Messungen. Die orangen Punkte, mit Imaginärwert 0, sind vom $1k\Omega$ Widerstand, die roten Punkte, bei $40kHz$, vom $180\Omega$ Widerstand und die
-blauen Punkte, Realwert 0, sind vom $22\Omega$ Widerstand.\\
 
 \subsection{Vergleich: Messung und Simulationen}
 Die Messungen stimmen bis auf kleine Bauteil- und Messungenauigkeiten mit den Simulationen \"uberein. \\
-Die Messungen der Ausgangssingale im hochfrequenten Bereich ($>100kHz$) sind im Vergleich zu den Simulationen sehr ungenau, da das Signal bereits zu stark ged\"ampft ist.
+Die Messungen von der Ausgangssingale in seine sehr Hochfrequenten Bereich ($>100kHz$) sind im Vergleich zu den Simulationen sehr ungenau, da das Signal bereits zu stark ged\"ampft ist.
