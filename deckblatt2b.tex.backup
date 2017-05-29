@@ -104,11 +104,8 @@
 
 \end{titlepage}
 \setcounter{page}{2}
-
-%only sections in tableofcontents, no subsections
 \setcounter{tocdepth}{1}
-%sets tableofcontents color black
-\hypersetup{linkcolor=black}
+\setcounter{secnumdepth}{1}
 
 % start of actual lab protocol
 % CHANGE ME!
