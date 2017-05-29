@@ -1,13 +1,12 @@
 % !TEX root = deckblatt2b.tex
-
+\begin{tiny}
 \section{Messwerte}
-\subsection{RC-Tiefpass}
-\csvautobooktabular{./csv_files/RC_table.csv}
-\subsection{RL-Hochpass}
-\csvautobooktabular{./csv_files/RL_table.csv}
-\subsection{RLC-Tiefpass 22}
-\csvautobooktabular{./csv_files/RLC_22_table.csv}
-\subsection{RLC-Tiefpass 180}
-\csvautobooktabular{./csv_files/RLC_180_table.csv}
-\subsection{RLC-Tiefpass 1k}
-\csvautobooktabular{./csv_files/RLC_1k_table.csv}
+\begin{tabular}{cc} \centering
+\textbf{RC-Tiefpass} & \textbf{RL-Hochpass} \\
+\csvautobooktabular{./csv_files/RC_table.csv} & \csvautobooktabular{./csv_files/RL_table.csv} \\ \\
+\textbf{RLC-Tiefpass 22} & \textbf{RLC-Tiefpass 180} \\
+\csvautobooktabular{./csv_files/RLC_22_table.csv} & \csvautobooktabular{./csv_files/RLC_180_table.csv} \\ \\
+\textbf{RLC-Tiefpass 1k} & \\
+\csvautobooktabular{./csv_files/RLC_1k_table.csv} & 
+\end{tabular}
+\end{tiny}

@@ -29,7 +29,7 @@ Bei niedrigen Frequenzen (10 - 1000Hz) ist der Blindwiderstand des Kondesantors 
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=1\textwidth]{./Oszi_Bilder/RLC_Sprung_22.png}
-    \caption{Sprungantwort mit $R=22\Omega$}
+    \caption{Sprungantwort mit $R=22\Omega$, $U_e$ (gelb), $U_a$ (gr\"un)}
   \end{center}
 \end{figure}
 \noindent
@@ -40,7 +40,7 @@ Bereits in der Sprungantwort ist zu erkennen, dass das System mit einem Widersta
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={dB},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz [Hz]}, ylabel={Amplitude [dB]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=dB, col sep=comma] {./csv_files/RLC_22_amplitude.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -50,7 +50,7 @@ Bereits in der Sprungantwort ist zu erkennen, dass das System mit einem Widersta
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={Phase},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz [Hz]}, ylabel={Phase [$^\circ$]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=Phase, col sep=comma] {./csv_files/RLC_22_phase.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -71,7 +71,7 @@ Unterschied zwischen berechneten und gemessenen Wert: $2,11\%$.
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=1\textwidth]{./Oszi_Bilder/RLC_Sprung_180.png}
-    \caption{Sprungantwort mit $R=180\Omega$}
+    \caption{Sprungantwort mit $R=180\Omega$, $U_e$ (gelb), $U_a$ (gr\"un)}
   \end{center}
 \end{figure}
 \noindent
@@ -82,7 +82,7 @@ Mit dem gr\"o\ss{}eren Widerstand, steigt die Ausgangsspannung reltativ schnell 
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={dB},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz [Hz]}, ylabel={Amplitude [dB]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=dB, col sep=comma] {./csv_files/RLC_180_amplitude.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -92,7 +92,7 @@ Mit dem gr\"o\ss{}eren Widerstand, steigt die Ausgangsspannung reltativ schnell 
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={Phase},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz [Hz]}, ylabel={Phase [$^\circ$]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=Phase, col sep=comma] {./csv_files/RLC_180_phase.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -106,18 +106,18 @@ Da es sich hier um einen Filter mit kritischer D\"ampfung handelt, beginnt die D
 \begin{figure}[H]
   \begin{center}
     \includegraphics[width=1\textwidth]{./Oszi_Bilder/RLC_Sprung_1k.png}
-    \caption{Sprungantwort mit $R=1k\Omega$}
+    \caption{Sprungantwort mit $R=1k\Omega$, $U_e$ (gelb), $U_a$ (gr\"un)}
   \end{center}
 \end{figure}
 \noindent
-Mit einem gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ sehr gro\ss{}, d.h. der Filter braucht sehr lange bis die D\"ampfung erreicht wird.
+Mit einem gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ sehr gro\ss{}, d.h. der Filter braucht sehr lange bis der Endwert erreicht wird.
 
 \subsection{Bodediagramm $R=1k\Omega$}
 
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={dB},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz[Hz]}, ylabel={Amplitude [dB]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=dB, col sep=comma] {./csv_files/RLC_1k_amplitude.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -127,7 +127,7 @@ Mit einem gro\ss{}en Widerstand von $R=1k\Omega$ ist die Zeitkonstante $\tau$ se
 \begin{figure}[H]
   \centering
   \begin{tikzpicture}
-    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={$Hz$}, ylabel={Phase},y tick label style={grid=major}]
+    \begin{axis}[width=15cm, height=7cm, xmode=log, xmin=10, xmax=1e7, xlabel={Frequenz [Hz]}, ylabel={Phase [$^\circ$]},y tick label style={grid=major}]
       \addplot table[x=Frequenz, y=Phase, col sep=comma] {./csv_files/RLC_1k_phase.csv};
       %\node[label={260:{$f_g$}},circle,fill=black,inner sep=3pt] at (axis cs:15580,12) {};
     \end{axis}
@@ -148,8 +148,8 @@ Grenzfrequenz des LC-Teiles: $f_g=\frac{R}{2\pi L} = \frac{1k\Omega}{2\pi*1mH}=1
 \end{figure}
 \noindent
 Das Diagramm zeigt die Polstellen der verschiedenen Messungen. Die orangen Punkte, mit Imaginärwert 0, sind vom $1k\Omega$ Widerstand, die roten Punkte, bei $40kHz$, vom $180\Omega$ Widerstand und die
-blauen Punkte, Realwert 0, sind vom $22\Omega$ Widerstand.\\
+blauen Punkte, Realwert 0, sind vom $22\Omega$ Widerstand.
 
 \subsection{Vergleich: Messung und Simulationen}
 Die Messungen stimmen bis auf kleine Bauteil- und Messungenauigkeiten mit den Simulationen \"uberein. \\
-Die Messungen der Ausgangssingale im hochfrequenten Bereich ($>100kHz$) sind im Vergleich zu den Simulationen sehr ungenau, da das Signal bereits zu stark ged\"ampft ist.
+Die Messungen der Ausgangssingale im hochfrequenten Bereich ($>100kHz$) sind im Vergleich zu den Simulationen sehr ungenau, da das Signal bereits zu stark ged\"ampft ist. \newpage
